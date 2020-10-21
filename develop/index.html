@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
+</head>
+<body>
+<!-- header city search and list of cities displayed -->
+<header class = "header">
+    <h1>Weather Dashboard</h1>
+</header>
+
+<div class = "container">
+    <p class="city-search">Enter a city and click "Search"</p>
+    <textarea class="city"></textarea>
+    <button class="search btn-primary btn-sm"><i class="fas fa-search-location fa-lg"></i></button>
+    <ul class="city-list">Recent Cities</ul> 
+</div>
+
+<!-- current city, date, weather icon and parameters -->
+<div class="current-city">
+</div>
+<div class="current-date">
+</div>
+<div class="current-temp">Temperature:
+</div>
+<div class="humidity">Humidity:
+</div>
+<div class="precipitation">Precipitation:
+</div>
+<div class="wind-speed">Wind Speed:
+</div>
+<div class="uv-index">UV Index:
+</div>
+
+<div class="5 day forecast">5 Day Forecast</div>
+
+<!-- city search -->
+<!-- list for each city entered -->
+<!-- current city display -->
+<!--    display parameters according to API(city(use ID according to documentation), date(moment.js) weathericon, temp, humidity, precipitation, wind speed, uv index, 5 day forecast) -->
+<!--  -->
+    
+
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>
