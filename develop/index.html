@@ -16,30 +16,26 @@
     <h1>Weather Dashboard</h1>
 </header>
 
-<div class = "container">
-    <p class="city-search">Enter a city and click "Search"</p>
+<aside class = "container">
+    <p class="city-search">Search for a city</p>
     <textarea class="city"></textarea>
     <button class="search btn-primary btn-sm"><i class="fas fa-search-location fa-lg"></i></button>
     <ul class="city-list">Recent Cities</ul> 
-</div>
+</aside>
 
+
+<section></section>
 <!-- current city, date, weather icon and parameters -->
 <div class="current-city">
 </div>
 <div class="current-date">
 </div>
-<div class="current-temp">Temperature:
-</div>
-<div class="humidity">Humidity:
-</div>
-<div class="precipitation">Precipitation:
-</div>
-<div class="wind-speed">Wind Speed:
-</div>
-<div class="uv-index">UV Index:
-</div>
+<div class="current-temp"></div>
+<div class="humidity"></div>
+<div class="wind-speed"></div>
+<div class="uv-index"></div>
 
-<div class="5 day forecast">5 Day Forecast</div>
+<div class="fiveDay">5 Day Forecast</div>
 
 <!-- city search -->
 <!-- list for each city entered -->
@@ -48,7 +44,7 @@
 <!--  -->
     
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="script.js"></script>
