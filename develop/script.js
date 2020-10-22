@@ -1,14 +1,13 @@
   
 
  var APIkey="956fc8676fe0450c85daac044501dd01";
- var city = $(".city");
- var searchBtn = $(".search")
- var recentCity = [];
+ var cityName = $(".city");
+var searchBtn = $(".search")
+var recentCity = [];
  
- function getFiveDay(cityName){
-    //var cityName = "Orlando";
-    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName+ "&units=imperial&appid=" + APIkey;
 
+  function getFiveDay(cityName){
+    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName+ "&units=imperial&appid=" + APIkey;
     console.log(queryURL);
  
     $.ajax({
@@ -17,14 +16,7 @@
   })
     .then(function(response) {
         $(".fiveDay").empty();
-        //runs every 3 hours 24hours= 3*8
-    //date
-    //moment(apidatadate).format("ll")
         console.log(queryURL);
-        //console.log(response);
-
-        //$(".current-city").html("<h1>" + response.city.name +  response.list.weather.icon);
-
         /**
          <div class="card">
             <div class="card-body">
@@ -43,7 +35,7 @@
         var wind=$("<p>");
         var date=$("<p>");
         //console.log(response.list[i*8].dt_text)
-        date.text(moment(response.list[i*8].dt_txt).format("ll"))
+        date.text(moment(response.list[i*8].dt_txt).format("L"))
         temp.html("Current Temp: " + response.list[i*8].main.temp + " °F");
         hum.html("Humidity: " + response.list[i*8].main.humidity + "%");
         wind.html("Wind Speed: " + response.list[i*8].wind.speed + " MPH");
@@ -54,19 +46,24 @@
         d2.append(wind);
 
         d1.append(d2)
-
-        //.fiveDay
+        //append to 5day forecast to 
         $(".fiveDay").append(d1);
         }
         
     })
 }
+getFiveDay("Orlando");
 
 function getOneDay(cityName){
-    // current date with moment.js
-        //moment().format("ll");
     var oneDay = "https://api.openweathermap.org/data/2.5/weather?q="+cityName+"&appid="+APIkey;
     console.log(oneDay);
+        var date=$(".current-date").text(moment().format("l"));
+        var city=$(".city");
+        var conditions=$("condition");
+        $("current-date").append(date);
+        $(".city").append(city);
+        $(".condition").append(conditions);
+    
 
     $.ajax({
         url: oneDay,
@@ -75,7 +72,6 @@ function getOneDay(cityName){
     .then(function(onedayobj) {
         var lon=(onedayobj.coord.lon);
         var lat=(onedayobj.coord.lat);
-        //http://api.openweathermap.org/data/2.5/uvi?lat={lat}&lon={lon}&appid={API key}
         var uvURL="http://api.openweathermap.org/data/2.5/uvi?lat="+lat+"&lon="+lon + "&appid=" +APIkey;
         console.log(uvURL)
 
@@ -85,21 +81,11 @@ function getOneDay(cityName){
       })
         .then(function(uvObj) {
             console.log(uvObj)
-            //UV index is a separate API
             console.log(uvObj.value)
-        ///lon
-        //lat
-        //=>ajax
-            
         })
-       
-      
-
-
-    
     })
 }
-getFiveDay("Orlando");
+getOneDay("Orlando")
 
 
 // Use the [OpenWeather API](https://openweathermap.org/api) to retrieve weather data for cities. The documentation includes a section called "How to start" that will provide basic setup and usage instructions. Use `localStorage` to store any persistent data.
