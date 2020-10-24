@@ -1,13 +1,12 @@
 
-
+//variables for storing API key, city name, targeing search button and storying recentCity array
 var APIkey="5a883a61d18cd984e2119b354bc5db24";
 var cityName = $("#city-search");
 var searchBtn = $(".search")
 var recentCity = [];
  
-
+//function for 5 day weather
   function getFiveDay(cityName){
-
     var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q="+cityName.val()+ "&units=imperial&appid=" +APIkey;
     console.log(queryURL);
  
@@ -42,7 +41,7 @@ var recentCity = [];
     })
 }
 
-
+//function for 1 day weather
 function getOneDay(cityName){
     var oneDay = "https://api.openweathermap.org/data/2.5/weather?q="+cityName.val()+"&appid="+APIkey;
     console.log(oneDay);
@@ -58,7 +57,7 @@ function getOneDay(cityName){
         method: "GET"
   })
     .then(function(onedayobj) {
-        console.log(lon, lat);
+        console.log(onedayobj);
         var lon=(onedayobj.coord.lon);
         var lat=(onedayobj.coord.lat);
         var uvURL="http://api.openweathermap.org/data/2.5/uvi?lat="+lat+"&lon="+lon + "&appid=" +APIkey;
@@ -92,18 +91,24 @@ $(document).ready(function() {
     $(".search").on("click", function(event) {
     event.preventDefault();
     $(".city-list").empty();
-    var myCity = $(cityName).val().trim();
-    recentCity.push(myCity);
-    console.log(myCity);
-    getFiveDay(cityName)
-    getOneDay
+        $("input[type=text]").each(function() {
+            var id=$("#city-search").attr("id");
+            var value=$("input[type=text]");
+            localStorage.setItem(id, value);
+            console.log(id, value)
+    })
+    recentCity.push(".city-btn");
+    console.log(recentCity);
+    renderButtons();
+    getFiveDay(cityName);
+    getOneDay(cityName);
      });
     });
 
-// Adding a click event listener to all elements with a class of ".city-btn"
-$(document).on("click", ".city-btn", getOneDay, getFiveDay);
-    renderButtons();
 
+// Adding a click event listener to all elements with a class of ".city-btn"
+$(document).on("click", ".city-btn", getOneDay);
+    renderButtons(recentCity);
 
 //upon page render, load stored array
 //on search click, store value in localStorage
