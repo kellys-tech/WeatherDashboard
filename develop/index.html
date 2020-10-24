@@ -16,16 +16,17 @@
     <h1>Weather Dashboard</h1>
 </header>
 
-<aside class = "container">
-    <p class="city-search">Search for a city</p>
-    <textarea class="city"></textarea>
-    <button class="search btn-primary btn-sm"><i class="fas fa-search-location fa-lg"></i></button>
-    <ul class="city-list">Recent Cities</ul> 
-</aside>
+<!--Recent cities list  -->
+<form>
+    <label for="city-search">Search for a city</label>
+    <input type="text" id="city-search">
+    <input type = "submit" value= "Submit" class="search btn-primary btn-sm"><i class="fas fa-search-location fa-lg"></i>
+</form>
 
+<div class="city-list">Recent Cities</div> 
 
-<section></section>
-<!-- current city, date, weather icon and parameters -->
+<!-- One day forecast -->
+<section class="recent-cities">
 <div class="current-city">
 </div>
 <div class="current-date">
@@ -34,15 +35,11 @@
 <div class="humidity"></div>
 <div class="wind-speed"></div>
 <div class="uv-index"></div>
+</section>
 
+<!-- 5 day forecast -->
 <div class="fiveDay">5 Day Forecast</div>
 
-<!-- city search -->
-<!-- list for each city entered -->
-<!-- current city display -->
-<!--    display parameters according to API(city(use ID according to documentation), date(moment.js) weathericon, temp, humidity, precipitation, wind speed, uv index, 5 day forecast) -->
-<!--  -->
-    
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="https://code.jquery.com/jquery.js"></script>
