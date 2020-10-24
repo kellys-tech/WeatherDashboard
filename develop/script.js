@@ -8,7 +8,7 @@ var recentCity = [];
 
   function getFiveDay(cityName){
 
-    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q="+cityName.val()+"&appid=" +APIkey;
+    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q="+cityName.val()+ "&units=imperial&appid=" +APIkey;
     console.log(queryURL);
  
     $.ajax({
@@ -27,12 +27,10 @@ var recentCity = [];
 
         var temp=$("<p>");
         var hum= $("<p>");
-        var wind=$("<p>");
         var date=$("<p>");
         date.text(moment(response.list[i*8].dt_txt).format("L"))
         temp.html("Current Temp: " + response.list[i*8].main.temp + " °F");
         hum.html("Humidity: " + response.list[i*8].main.humidity + "%");
-        wind.html("Wind Speed: " + response.list[i*8].wind.speed + " MPH");
 
         d2.append(date);
         d2.append(temp);
@@ -60,6 +58,7 @@ function getOneDay(cityName){
         method: "GET"
   })
     .then(function(onedayobj) {
+        console.log(lon, lat);
         var lon=(onedayobj.coord.lon);
         var lat=(onedayobj.coord.lat);
         var uvURL="http://api.openweathermap.org/data/2.5/uvi?lat="+lat+"&lon="+lon + "&appid=" +APIkey;
@@ -97,6 +96,7 @@ $(document).ready(function() {
     recentCity.push(myCity);
     console.log(myCity);
     getFiveDay(cityName)
+    getOneDay
      });
     });
 
