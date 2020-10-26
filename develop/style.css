@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
     font-size: 12px;
     line-height: normal;
     color: black;
@@ -15,6 +15,16 @@ header {
 main {
     padding: 30px 0px;
 
+}
+
+.btn {
+    background-color: purple;
+}
+
+.historyItem {
+    background-color: rgb(212, 189, 212);
+    border-width: 2pt;
+    border-radius: 4pt;
 }
 
 .icon {
