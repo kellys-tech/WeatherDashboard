@@ -3,9 +3,9 @@
 ### GitHubRepo:  https://github.com/kellys-tech/WeatherDashboard
 
 
-*This is a weather dashboard. It contains areas for a city search, a recent search list, the current weather and a 5 day forecast. The user can enter a city to search on or click on a city in the recent searches. The current weather and 5 day forecast will be displayed for that city.
+*This is a weather dashboard. It contains areas for a city search, a recent search list, the current weather and a 5 day forecast. The user can enter a city to search on or click on a city in the recent searches. The current weather and 5 day forecast will be displayed for that city.*
 
-## Weather Dashbaord created using:
+## Weather Dashboard created using:
 * HTML - to create the content of the dashboard. 
 * CSS & Bootstrap -  to style the page content.
 * JQuery - create interactions for the user
@@ -14,8 +14,8 @@
 ## Features
 ### Input
 * Search input
-   a. user will enter city name
-   b. click search button to get current weather and 5 day forecast
+   * user will enter city name
+   * click search button to get current weather and 5 day forecast
 
 ### Search History
 * Searched city names will be stored as a list in recent searches
@@ -23,25 +23,25 @@
 
 ### Current Weather
 * Upon search, current weather will be displayed for the city entered and display the following data
-    a. City Name
-    b. Today's date
-    c. Current weather icon from API
-    d. Temperature
-    e. Humidity
-    f. Wind Speed
-    g. UV Index
+    * City Name
+    * Today's date
+    * Current weather icon from API
+    * Temperature
+    * Humidity
+    * Wind Speed
+    * UV Index
 
 ### 5 day forecast
 * Upon search, 5 day forecast wil be displayed for the city entered and display the following data
-    a. Today's date
-    b. Forecast weather icon from API
-    c. Temperature
-    d. Humidity
+    * Today's date
+    * Forecast weather icon from API
+    * Temperature
+    * Humidity
 
 ### Screenshots
 
-![PageLoadNoHistory] (assets/PageLoadNoHistory.png)
-![SearchAndDisplay] (assets/SearchAndDisplay.png)
-![BuildingSearchHistory] (assets/BuildingSearchHistory.png)
-![ChooseCityInHistory] (assets/ChooseCityInHistory.png)
-![PageLoadWithHistory] (assets/PageLoadWithHistory.png)
+![PageLoadNoHistory](assets/PageLoadNoHistory.png)
+![SearchAndDisplay](assets/SearchAndDisplay.png)
+![BuildingSearchHistory](assets/BuildingSearchHistory.png)
+![ChooseCityInHistory](assets/ChooseCityInHistory.png)
+![PageLoadWithHistory](assets/PageLoadWithHistory.png)
