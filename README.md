@@ -45,3 +45,5 @@
 ![BuildingSearchHistory](assets/BuildingSearchHistory.png)
 ![ChooseCityInHistory](assets/ChooseCityInHistory.png)
 ![PageLoadWithHistory](assets/PageLoadWithHistory.png)
+
+######
