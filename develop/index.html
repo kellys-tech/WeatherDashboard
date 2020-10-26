@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
+<!-- links for bootstrap, fontawesome, google fonts and css stylesheet -->
     <link
     rel="stylesheet"
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -26,6 +27,7 @@ rel="stylesheet"
     </header>
 
     <main class="container">
+<!-- search input box and button -->
         <div class="row">
             <div class="col-md-3">
                 <div class="form-group search">
@@ -35,6 +37,7 @@ rel="stylesheet"
                         <button class="col-sm-2 btn btn-dark"><i class="fas fa-search"></i></button>
                     </div>
                 </div>
+<!-- search history -->
                 <div class="list-group history">
                     <h3>Search History</h3>
                     <a href="#" class="list-group-item list-group-item-action historyItem" data-city="Orlando">Orlando</a>
@@ -42,6 +45,7 @@ rel="stylesheet"
                     <a href="#" class="list-group-item list-group-item-action historyItem" data-city="Cincinnati">Paris</a>
                 </div>
             </div>
+<!-- section content for current/one day weather -->
             <div class="col-md-9">
                 <div class="card mb-4 detMain">
                     <div class="card-body">
@@ -52,6 +56,7 @@ rel="stylesheet"
                         <p class="uv">UV Index: <span class="text-white bg-danger">2.1</span></p>
                     </div>
                 </div>
+<!-- cards and content for 5 day forecast-->
                 <div class="row forecast">
                     <div class="col-md-2 ml-3 card text-white bg-dark">
                         <div class="card-body forecastDay day1">
@@ -97,9 +102,9 @@ rel="stylesheet"
             </div>
         </div>
     </main>
-   
+
+<!-- links for jquery and js file -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="script.js"></script>
     
 </body>
