@@ -1,49 +1,47 @@
-# 06 Server-Side APIs: Weather Dashboard
+# Weather Dashboard
+### Pages: https://kellys-tech.github.io/WeatherDashboard/develop/index.html
+### GitHubRepo:  https://github.com/kellys-tech/WeatherDashboard
 
-Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
 
-Use the [OpenWeather API](https://openweathermap.org/api) to retrieve weather data for cities. The documentation includes a section called "How to start" that will provide basic setup and usage instructions. Use `localStorage` to store any persistent data.
+*This is a weather dashboard. It contains areas for a city search, a recent search list, the current weather and a 5 day forecast. The user can enter a city to search on or click on a city in the recent searches. The current weather and 5 day forecast will be displayed for that city.
 
-## User Story
+## Weather Dashbaord created using:
+* HTML - to create the content of the dashboard. 
+* CSS & Bootstrap -  to style the page content.
+* JQuery - create interactions for the user
+* APIs - to get current weather, 5 day forecast and uv index
 
-```
-AS A traveler
-I WANT to see the weather outlook for multiple cities
-SO THAT I can plan a trip accordingly
-```
+## Features
+### Input
+* Search input
+   a. user will enter city name
+   b. click search button to get current weather and 5 day forecast
 
-## Acceptance Criteria
+### Search History
+* Searched city names will be stored as a list in recent searches
+* User can click on a city name in the list and the current weather and 5 day forecast will be displayed
 
-```
-GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-WHEN I view the UV index
-THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
-WHEN I open the weather dashboard
-THEN I am presented with the last searched city forecast
-```
+### Current Weather
+* Upon search, current weather will be displayed for the city entered and display the following data
+    a. City Name
+    b. Today's date
+    c. Current weather icon from API
+    d. Temperature
+    e. Humidity
+    f. Wind Speed
+    g. UV Index
 
-The following image demonstrates the application functionality:
+### 5 day forecast
+* Upon search, 5 day forecast wil be displayed for the city entered and display the following data
+    a. Today's date
+    b. Forecast weather icon from API
+    c. Temperature
+    d. Humidity
 
-![weather dashboard demo](./assets/06-server-side-apis-homework-demo.png)
+### Screenshots
 
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
-
-More info
----------------
+![PageLoadNoHistory] (assets/PageLoadNoHistory.png)
+![SearchAndDisplay] (assets/SearchAndDisplay.png)
+![BuildingSearchHistory] (assets/BuildingSearchHistory.png)
+![ChooseCityInHistory] (assets/ChooseCityInHistory.png)
+![PageLoadWithHistory] (assets/PageLoadWithHistory.png)
