@@ -1,5 +1,5 @@
 # Weather Dashboard
-### Pages: https://kellys-tech.github.io/WeatherDashboard/develop/index.html
+### Pages: https://kellys-tech.github.io/WeatherDashboard/index.html
 ### GitHubRepo:  https://github.com/kellys-tech/WeatherDashboard
 
 
